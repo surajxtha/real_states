@@ -51,7 +51,7 @@ class CreatePropertiesTable extends Migration
             $table->string('price');
             $table->string('currency');
             $table->foreignId('price_on_id')->constrained()->onDelete('cascade');
-            $table->boolean('status')->default(false);
+            $table->boolean('status_id')->default(false);
             $table->timestamps();
         });
     }
