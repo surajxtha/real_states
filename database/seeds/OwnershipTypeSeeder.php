@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 class OwnershipTypeSeeder extends Seeder
 {
     /**
@@ -11,6 +11,10 @@ class OwnershipTypeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('ownership_types')->insert([
+           ['ownership_type'=>'Institutional'],
+           ['ownership_type'=>'Individual'],
+        ]);
+
     }
 }

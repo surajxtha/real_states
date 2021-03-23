@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 class LocationAreaSeeder extends Seeder
 {
     /**
@@ -11,6 +11,9 @@ class LocationAreaSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('location_areas')->insert([
+              ['area_name'=>''],
+        ]);
+
     }
 }

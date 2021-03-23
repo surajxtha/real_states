@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 class TypeSeeder extends Seeder
 {
     /**
@@ -11,6 +11,12 @@ class TypeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('types')->insert([
+           ['type'=>'Commercial'],
+           ['type'=>'Residental'],
+           ['type'=>'Industrial'],
+           ['type'=>'Land'],
+        ]);
+
     }
 }

@@ -1,5 +1,13 @@
 <?php
 
+use App\City;
+use App\MeasurementArea;
+use App\Month;
+use App\OwnershipType;
+use App\PriceOn;
+use App\PropertyFacing;
+use App\Purpose;
+use App\RoadAccess;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,5 +20,22 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+        $this->call([
+            AmenitySeeder::class,
+            CategorySeeder::class,
+            StateSeeder::class,
+            DistrictSeeder::class,
+            FurnishingSeeder::class,
+            MeasurementAreaSeeder::class,
+            MonthSeeder::class,
+            OwnershipTypeSeeder::class,
+            PriceOnSeeder::class,
+            PropertyFacingSeeder::class,
+            PurposeSeeder::class,
+            RoadAccessSeeder::class,
+            RoadAccessSeeder::class,
+            TypeSeeder::class,
+
+        ]);
     }
 }

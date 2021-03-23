@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 class FurnishingSeeder extends Seeder
 {
     /**
@@ -11,6 +11,11 @@ class FurnishingSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('furnishings')->insert([
+            ['furnishing_type'=>'Full-Furnished'],
+            ['furnishing_type'=>'Semi-Furnished'],
+            ['furnishing_type'=>'Un-furnished'],
+
+        ]);
     }
 }

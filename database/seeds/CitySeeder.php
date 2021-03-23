@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 class CitySeeder extends Seeder
 {
     /**
@@ -11,6 +11,9 @@ class CitySeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('cities')->insert([
+                  ['city_name'=>''],
+        ]);
+
     }
 }

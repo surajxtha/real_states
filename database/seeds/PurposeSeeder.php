@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use Illuminate\Support\Facades\DB;
 class PurposeSeeder extends Seeder
 {
     /**
@@ -11,6 +11,10 @@ class PurposeSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('purposes')->insert([
+            ['purpose'=>'Rent'],
+            ['purpose'=>'Sale'],
+
+        ]);
     }
 }

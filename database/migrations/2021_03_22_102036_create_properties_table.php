@@ -38,12 +38,12 @@ class CreatePropertiesTable extends Migration
             $table->string('calender_type');
             $table->foreignId('month_id')->constrained()->onDelete('cascade');
             $table->foreignId('furnishing_id')->constrained()->onDelete('cascade');
-            $table->string('kitchen');
-            $table->string('dining_room');
-            $table->string('bed_room');
-            $table->string('bath_room');
-            $table->string('hall');
-            $table->string('total_floor');
+            $table->string('kitchen_count');
+            $table->string('dining_room_count');
+            $table->string('bed_room_count');
+            $table->string('bath_room_count');
+            $table->string('hall_count');
+            $table->string('total_floor_count');
             $table->string('parking');
             $table->foreignId('amenity_id')->constrained()->onDelete('cascade');
             $table->foreignId('ownership_type_id')->constrained()->onDelete('cascade');
@@ -51,7 +51,7 @@ class CreatePropertiesTable extends Migration
             $table->string('price');
             $table->string('currency');
             $table->foreignId('price_on_id')->constrained()->onDelete('cascade');
-            $table->boolean('status_id')->default(false);
+            $table->boolean('status')->constrained()->default(false);
             $table->timestamps();
         });
     }
