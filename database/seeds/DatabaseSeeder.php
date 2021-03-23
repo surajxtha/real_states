@@ -8,6 +8,7 @@ use App\PriceOn;
 use App\PropertyFacing;
 use App\Purpose;
 use App\RoadAccess;
+use App\RoadType;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -33,8 +34,8 @@ class DatabaseSeeder extends Seeder
             PropertyFacingSeeder::class,
             PurposeSeeder::class,
             RoadAccessSeeder::class,
-            RoadAccessSeeder::class,
             TypeSeeder::class,
+            RoadTypeSeeder::class,
 
         ]);
     }

@@ -16,7 +16,7 @@ class MonthSeeder extends Seeder
                ['month'=>'Jestha'],
                ['month'=>'Asar'],
                ['month'=>'Shrawan'],
-               ['month'=>'Bhadau'],
+               ['month'=>'Bhadra'],
                ['month'=>'Aswin'],
                ['month'=>'Kartik'],
                ['month'=>'Mansir'],
