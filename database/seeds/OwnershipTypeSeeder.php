@@ -12,8 +12,8 @@ class OwnershipTypeSeeder extends Seeder
     public function run()
     {
         DB::table('ownership_types')->insert([
-           ['ownership_type'=>'Institutional'],
-           ['ownership_type'=>'Individual'],
+           ['type'=>'Institutional'],
+           ['type'=>'Individual'],
         ]);
 
     }

@@ -13,10 +13,10 @@ class MeasurementAreaSeeder extends Seeder
     public function run()
     {
         DB::table('measurement_areas')->insert([
-            ['area_unit' => 'Sq.Feet'],
-            ['area_unit' => 'Acres'],
-            ['area_unit' => 'Bigha-kattha-dhur-haat'],
-            ['area_unit' => 'ropani-aana-paisa-daam'],
+            ['unit' => 'Sq.Feet'],
+            ['unit' => 'Acres'],
+            ['unit' => 'Bigha-kattha-dhur-haat'],
+            ['unit' => 'ropani-aana-paisa-daam'],
         ]);
     }
 }

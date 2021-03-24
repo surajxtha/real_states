@@ -12,7 +12,7 @@ class LocationAreaSeeder extends Seeder
     public function run()
     {
         DB::table('location_areas')->insert([
-              ['area_name'=>''],
+              ['name'=>'Tokha'],
         ]);
 
     }

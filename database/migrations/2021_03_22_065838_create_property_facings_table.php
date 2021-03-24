@@ -15,7 +15,7 @@ class CreatePropertyFacingsTable extends Migration
     {
         Schema::create('property_facings', function (Blueprint $table) {
             $table->id();
-            $table->string('property_facing');
+            $table->string('facing');
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ class CreateMeasurementAreasTable extends Migration
     {
         Schema::create('measurement_areas', function (Blueprint $table) {
             $table->id();
-            $table->string('area_unit');
+            $table->string('unit');
             $table->timestamps();
         });
     }

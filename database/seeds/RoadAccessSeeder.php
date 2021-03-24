@@ -12,8 +12,8 @@ class RoadAccessSeeder extends Seeder
     public function run()
     {
         DB::table('road_accesses')->insert([
-             ['length_unit'=>'Feet'],
-             ['length_unit'=>'Meter'],
+             ['unit'=>'Feet'],
+             ['unit'=>'Meter'],
 
         ]);
 

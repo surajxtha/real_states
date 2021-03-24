@@ -13,387 +13,387 @@ class DistrictSeeder extends Seeder
     {
         DB::table('districts')->insert([
             [
-                'district_name'=>'Taplejung',
+                'name'=>'Taplejung',
                  'state_id'=> 1,
             ],
             [
-                'district_name'=>'Sankhuwasabha',
+                'name'=>'Sankhuwasabha',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Solukhumbu',
+                'name'=>'Solukhumbu',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Okhaldhunga',
+                'name'=>'Okhaldhunga',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Khotang',
+                'name'=>'Khotang',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Bhojpur',
+                'name'=>'Bhojpur',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Dhankuta',
+                'name'=>'Dhankuta',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Terhathum',
+                'name'=>'Terhathum',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Panchthar',
+                'name'=>'Panchthar',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Ilam',
+                'name'=>'Ilam',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Jhapa',
+                'name'=>'Jhapa',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Morang',
+                'name'=>'Morang',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Sunsari',
+                'name'=>'Sunsari',
                 'state_id'=> 1,
 
             ],
             [
-                'district_name'=>'Udayapur',
+                'name'=>'Udayapur',
                 'state_id'=> 1,
 
 
             ],
-            ['district_name'=>'Saptari',
+            ['name'=>'Saptari',
               'state_id'=>2,
         ],
 
-            ['district_name'=>'Siraha',
+            ['name'=>'Siraha',
             'state_id'=>2,
 
         ],
 
-            ['district_name'=>'Dhanusa',
+            ['name'=>'Dhanusa',
             'state_id'=>2,
 
         ],
 
-            ['district_name'=>'Mahottari',
+            ['name'=>'Mahottari',
             'state_id'=>2,
 
             ],
 
-            ['district_name'=>'Sarlahi',
-            'state_id'=>2,
-
-        ],
-
-            ['district_name'=>'Rautahat',
+            ['name'=>'Sarlahi',
             'state_id'=>2,
 
         ],
 
-            ['district_name'=>'Bara',
+            ['name'=>'Rautahat',
             'state_id'=>2,
 
         ],
 
-            ['district_name'=>'Parsa',
+            ['name'=>'Bara',
+            'state_id'=>2,
+
+        ],
+
+            ['name'=>'Parsa',
             'state_id'=>2,
 
         ],
 
             [
-                'district_name'=>'Dolakha',
+                'name'=>'Dolakha',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Sindhupalchok',
+                'name'=>'Sindhupalchok',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Rasuwa',
+                'name'=>'Rasuwa',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Dhading',
+                'name'=>'Dhading',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Nuwakot',
+                'name'=>'Nuwakot',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Kathmandu',
+                'name'=>'Kathmandu',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Bhaktapur',
+                'name'=>'Bhaktapur',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Lalitpur',
+                'name'=>'Lalitpur',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Kavrepalanchok',
+                'name'=>'Kavrepalanchok',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Ramechhap',
+                'name'=>'Ramechhap',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Sindhuli',
+                'name'=>'Sindhuli',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Makawanpur',
+                'name'=>'Makawanpur',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Chitawan',
+                'name'=>'Chitawan',
                 'state_id'=>3,
 
             ],
             [
-                'district_name'=>'Gorkha',
+                'name'=>'Gorkha',
                 'state_id'=>4,
 
             ],
             [
-                'district_name'=>'Manang',
+                'name'=>'Manang',
                 'state_id'=>4,
 
             ],
             [
-                'district_name'=>'Mustang',
+                'name'=>'Mustang',
                 'state_id'=>4,
 
             ],
             [
-                'district_name'=>'Myagdi',
+                'name'=>'Myagdi',
                 'state_id'=>4,
 
             ],
             [
-                'district_name'=>'Kaski',
+                'name'=>'Kaski',
                 'state_id'=>4,
 
             ],
             [
-                'district_name'=>'Lamjung',
+                'name'=>'Lamjung',
                 'state_id'=>4,
 
             ],
             [
-                'district_name'=>'Tanahu',
+                'name'=>'Tanahu',
                 'state_id'=>4,
 
             ],
             [
-                'district_name'=>'Nawalparasi East',
+                'name'=>'Nawalparasi East',
                 'state_id'=>4,
 
             ],
             [
-                'district_name'=>'Syangja',
+                'name'=>'Syangja',
                 'state_id'=>4,
 
             ],
             [
-                'district_name'=>'Parbat',
+                'name'=>'Parbat',
                 'state_id'=>4,
 
             ],
             [
-                'district_name'=>'Baglung',
+                'name'=>'Baglung',
                 'state_id'=>4,
 
             ],
             [
-                'district_name'=>'Rukum East',
+                'name'=>'Rukum East',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Rolpa',
+                'name'=>'Rolpa',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Pyuthan',
+                'name'=>'Pyuthan',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Gulmi',
+                'name'=>'Gulmi',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Arghakhanchi',
+                'name'=>'Arghakhanchi',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Palpa',
+                'name'=>'Palpa',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Nawalparasi West',
+                'name'=>'Nawalparasi West',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Rupandehi',
+                'name'=>'Rupandehi',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Kapilbastu',
+                'name'=>'Kapilbastu',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Dang',
+                'name'=>'Dang',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Banke',
+                'name'=>'Banke',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Bardiya',
+                'name'=>'Bardiya',
                 'state_id'=>5,
 
             ],
             [
-                'district_name'=>'Dolpa',
+                'name'=>'Dolpa',
                 'state_id'=>6,
 
             ],
             [
-                'district_name'=>'Mugu',
+                'name'=>'Mugu',
                 'state_id'=>6,
 
             ],
             [
-                'district_name'=>'Humla',
+                'name'=>'Humla',
                 'state_id'=>6,
 
             ],
             [
-                'district_name'=>'Jumla',
+                'name'=>'Jumla',
                 'state_id'=>6,
 
             ],
             [
-                'district_name'=>'Kalikot',
+                'name'=>'Kalikot',
                 'state_id'=>6,
 
             ],
             [
-                'district_name'=>'Dailekh',
+                'name'=>'Dailekh',
                 'state_id'=>6,
 
             ],
             [
-                'district_name'=>'Jajarkot',
+                'name'=>'Jajarkot',
                 'state_id'=>6,
 
             ],
             [
-                'district_name'=>'Rukum West',
+                'name'=>'Rukum West',
                 'state_id'=>6,
 
             ],
             [
-                'district_name'=>'Salyan',
+                'name'=>'Salyan',
                 'state_id'=>6,
 
             ],
             [
-                'district_name'=>'Surkhet',
+                'name'=>'Surkhet',
                 'state_id'=>6,
 
             ],
             [
-                'district_name'=>'Bajura',
+                'name'=>'Bajura',
                 'state_id'=>7,
 
             ],
             [
-                'district_name'=>'Bajhang',
+                'name'=>'Bajhang',
                 'state_id'=>7,
 
 
             ],
             [
-                'district_name'=>'Darchula',
+                'name'=>'Darchula',
                 'state_id'=>7,
 
             ],
             [
-                'district_name'=>'Baitadi',
+                'name'=>'Baitadi',
                 'state_id'=>7,
 
             ],
             [
-                'district_name'=>'Dadeldhura',
+                'name'=>'Dadeldhura',
                 'state_id'=>7,
 
             ],
             [
-                'district_name'=>'Doti',
+                'name'=>'Doti',
                 'state_id'=>7,
 
             ],
             [
-                'district_name'=>'Achham',
+                'name'=>'Achham',
                 'state_id'=>7,
 
             ],
             [
-                'district_name'=>'Kailali',
+                'name'=>'Kailali',
                 'state_id'=>7,
 
             ],
             [
-                'district_name'=>'Kanchanpur',
+                'name'=>'Kanchanpur',
                 'state_id'=>7,
 
             ],

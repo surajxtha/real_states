@@ -15,7 +15,7 @@ class CreateOwnershipTypesTable extends Migration
     {
         Schema::create('ownership_types', function (Blueprint $table) {
             $table->id();
-            $table->string('ownership_type');
+            $table->string('type');
             $table->timestamps();
         });
     }

@@ -12,9 +12,9 @@ class FurnishingSeeder extends Seeder
     public function run()
     {
         DB::table('furnishings')->insert([
-            ['furnishing_type'=>'Full-Furnished'],
-            ['furnishing_type'=>'Semi-Furnished'],
-            ['furnishing_type'=>'Un-furnished'],
+            ['type'=>'Full-Furnished'],
+            ['type'=>'Semi-Furnished'],
+            ['type'=>'Un-furnished'],
 
         ]);
     }

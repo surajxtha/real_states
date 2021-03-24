@@ -12,7 +12,7 @@ class CitySeeder extends Seeder
     public function run()
     {
         DB::table('cities')->insert([
-                  ['city_name'=>''],
+                  ['name'=>'Kathmandu'],
         ]);
 
     }

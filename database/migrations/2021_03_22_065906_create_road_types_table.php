@@ -15,7 +15,7 @@ class CreateRoadTypesTable extends Migration
     {
         Schema::create('road_types', function (Blueprint $table) {
             $table->id();
-            $table->string('road_type');
+            $table->string('type');
             $table->timestamps();
         });
     }

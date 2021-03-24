@@ -12,13 +12,13 @@ class PriceOnSeeder extends Seeder
     public function run()
     {
         DB::table('price_ons')->insert([
-             ['price_on'=>'Per Month'],
-             ['price_on'=>'Per Year'],
-             ['price_on'=>'Per Aana'],
-             ['price_on'=>'Per Sq.Feet'],
-             ['price_on'=>'Per Ropani'],
-             ['price_on'=>'Per Kattha'],
-             ['price_on'=>'Per Bigha'],
+             ['price'=>'Per Month'],
+             ['price'=>'Per Year'],
+             ['price'=>'Per Aana'],
+             ['price'=>'Per Sq.Feet'],
+             ['price'=>'Per Ropani'],
+             ['price'=>'Per Kattha'],
+             ['price'=>'Per Bigha'],
 
         ]);
 

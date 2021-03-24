@@ -13,11 +13,11 @@ class RoadTypeSeeder extends Seeder
     public function run()
     {
         DB::table('road_types')->insert([
-            ['road_type' => 'Soil Stabilized'],
-            ['road_type' => 'Gravelled'],
-            ['road_type' => 'Paved'],
-            ['road_type' => 'Black Topped'],
-            ['road_type' => 'Alley'],
+            ['type' => 'Soil Stabilized'],
+            ['type' => 'Gravelled'],
+            ['type' => 'Paved'],
+            ['type' => 'Black Topped'],
+            ['type' => 'Alley'],
 
         ]);
     }

@@ -15,7 +15,7 @@ class CreateRoadAccessesTable extends Migration
     {
         Schema::create('road_accesses', function (Blueprint $table) {
             $table->id();
-            $table->string('length_unit');
+            $table->string('unit');
             $table->timestamps();
         });
     }

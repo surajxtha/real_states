@@ -15,7 +15,7 @@ class CreateFurnishingsTable extends Migration
     {
         Schema::create('furnishings', function (Blueprint $table) {
             $table->id();
-            $table->string('furnishing_type');
+            $table->string('type');
             $table->timestamps();
         });
     }

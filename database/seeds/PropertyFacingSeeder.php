@@ -12,14 +12,14 @@ class PropertyFacingSeeder extends Seeder
     public function run()
     {
         DB::table('property_facings')->insert([
-            ['property_facing'=>'South'],
-            ['property_facing'=>'North'],
-            ['property_facing'=>'East'],
-            ['property_facing'=>'West'],
-            ['property_facing'=>'South-East'],
-            ['property_facing'=>'South-West'],
-            ['property_facing'=>'North-East'],
-            ['property_facing'=>'North-West'],
+            ['facing'=>'South'],
+            ['facing'=>'North'],
+            ['facing'=>'East'],
+            ['facing'=>'West'],
+            ['facing'=>'South-East'],
+            ['facing'=>'South-West'],
+            ['facing'=>'North-East'],
+            ['facing'=>'North-West'],
 
         ]);
 

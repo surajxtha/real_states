@@ -15,7 +15,7 @@ class CreatePriceOnsTable extends Migration
     {
         Schema::create('price_ons', function (Blueprint $table) {
             $table->id();
-            $table->string('price_on');
+            $table->string('price');
             $table->timestamps();
         });
     }
