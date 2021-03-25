@@ -9,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" href="{{ asset('cms_assets/images/favicon.ico') }}">
     <link href="{{ asset('cms_assets/libs/flatpickr/flatpickr.min.css') }}" rel="stylesheet" type="text/css" />
+
+    <link href="{{ asset('cms_assets/libs/multiselect/multi-select.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('cms_assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('cms_assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('cms_assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />

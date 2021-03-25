@@ -15,6 +15,9 @@
 <script src="{{ asset('cms_assets/js/vendor.min.js') }}"></script>
 <script src="{{ asset('cms_assets/libs/moment/moment.min.js') }}"></script>
 <script src="{{ asset('cms_assets/libs/apexcharts/apexcharts.min.js') }}"></script>
+
+<script src="{{ asset('cms_assets/libs/multiselect/jquery.multi-select.js') }}"></script>
+
 <script src="{{ asset('cms_assets/libs/flatpickr/flatpickr.min.js') }}"></script>
 <script src="{{ asset('cms_assets/js/pages/dashboard.init.js') }}"></script>
 <script src="{{ asset('cms_assets/js/app.min.js') }}"></script>
