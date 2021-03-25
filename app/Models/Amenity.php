@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class OwnershipType extends Model
+class Amenity extends Model
 {
     //
 }

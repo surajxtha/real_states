@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
             RoadAccessSeeder::class,
             TypeSeeder::class,
             RoadTypeSeeder::class,
+            PropertySeeder::class,
 
         ]);
     }

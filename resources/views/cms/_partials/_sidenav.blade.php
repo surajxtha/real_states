@@ -18,32 +18,26 @@
     <div class="sidebar-content">
         <div id="sidebar-menu" class="slimscroll-menu">
             <ul class="metismenu" id="menu-bar">
+
                 <li class="menu-title">User</li>
-                <li><a href="/dashboard"> <i data-feather="home"></i>  <span> Dashboard </span> </a></li>
-                <li class="menu-title">Profile</li>
-                <li><a href="apps-calendar.html"> <i data-feather="user"></i> <span>My Profile </span> </a></li>
+
+                <li><a href="{{route('admin.dashboard')}}"> <i data-feather="home"></i> <span> Dashboard </span> </a></li>
 
                 <li class="menu-title">Property</li>
                 <li>
-                    <a href="javascript: void(0);"> <i data-feather="activity"></i> <span > Property </span> <span class="menu-arrow"></span> </a>
+                    <a href="javascript: void(0);"> <i data-feather="activity"></i> <span> Property </span> <span class="menu-arrow"></span> </a>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="pages-starter.html">Post Property</a></li>
-                        <li><a href="pages-profile.html">View Post</a></li>
+                        <li><a href="{{route('properties.create')}}">Add Property</a></li>
+                        <li><a href="{{route('properties.index')}}">View Property</a></li>
 
                     </ul>
                 </li>
-                <li class="menu-title">Security</li>
-                <li>
-                    <a href="javascript: void(0);"> <i data-feather="unlock"></i> <span> Security </span> <span class="menu-arrow"></span> </a>
-                    <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="pages-starter.html">Change Password</a></li>
-                        <li><a href="pages-profile.html">LogOut</a></li>
-
-                    </ul>
-                </li>
-
+            </ul>
         </div>
         <div class="clearfix"></div>
     </div>
 </div>
 
+
+<div class="content-page">
+    <div class="content">

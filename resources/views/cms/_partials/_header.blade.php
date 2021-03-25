@@ -10,10 +10,20 @@
     <link rel="shortcut icon" href="{{ asset('cms_assets/images/favicon.ico') }}">
     <link href="{{ asset('cms_assets/libs/flatpickr/flatpickr.min.css') }}" rel="stylesheet" type="text/css" />
 
+    <!-- Plugin CSS -->
     <link href="{{ asset('cms_assets/libs/multiselect/multi-select.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('cms_assets/libs/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('cms_assets/libs/datatables/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('cms_assets/libs/datatables/buttons.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('cms_assets/libs/datatables/select.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('cms_assets/css/switchery.min.css')}}" type="text/css" rel="stylesheet" >
+
+    <!-- App Css -->
     <link href="{{ asset('cms_assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('cms_assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('cms_assets/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+
+
 </head>
 <body>
     <div id="wrapper">
