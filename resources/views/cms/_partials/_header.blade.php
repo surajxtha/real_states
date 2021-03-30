@@ -20,6 +20,10 @@
     <link href="{{ asset('cms_assets/libs/datatables/select.bootstrap4.min.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{asset('cms_assets/css/switchery.min.css')}}" type="text/css" rel="stylesheet">
     <link href="{{asset('cms_assets/libs/dropify/css/dropify.min.css')}}" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('cms_assets/libs/smartwizard/smart_wizard.min.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{asset('cms_assets/libs/smartwizard/smart_wizard_theme_arrows.min.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{asset('cms_assets/libs/smartwizard/smart_wizard_theme_circles.min.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{asset('cms_assets/libs/smartwizard/smart_wizard_theme_dots.min.css')}}" type="text/css" />
 
     <!-- App Css -->
 

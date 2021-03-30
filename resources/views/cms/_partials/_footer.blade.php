@@ -43,10 +43,12 @@
 
 
 <script src="{{ asset('cms_assets/libs/multiselect/jquery.multi-select.js') }}"></script>
+<script src="{{ asset('cms_assets/libs/smartwizard/jquery.smartWizard.min.js') }}"></script>
 
 <script src="{{ asset('cms_assets/libs/flatpickr/flatpickr.min.js') }}"></script>
 <script src="{{ asset('cms_assets/js/pages/dashboard.init.js') }}"></script>
 <script src="{{ asset('cms_assets/js/pages/form-advanced.init.js') }}"></script>
+<script src="{{ asset('cms_assets/js/pages/form-wizard.init.js') }}"></script>
 <script src="{{ asset('cms_assets/js/app.min.js') }}"></script>
 
 

@@ -2,10 +2,15 @@
 
 namespace App\Models;
 
+use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Property extends Model
 {
+    use Sluggable;
+
     protected $fillable = [
         'title',
         'slug',
@@ -39,28 +44,37 @@ class Property extends Model
         'price_on_id',
     ];
 
-    public function propertyImages()
+    public function propertyImages() : HasMany
     {
         return $this->hasMany(PropertyImage::class);
     }
 
-    public function purpose()
+    public function purpose() : HasOne
     {
         return $this->hasOne(Purpose::class);
     }
 
-    public function type()
+    public function type() : HasOne
     {
         return $this->hasOne(Type::class);
     }
 
-    public function category()
+    public function category() : HasOne
     {
         return $this->hasOne(Category::class);
     }
 
-    public function state()
+    public function state() : HasOne
     {
         return $this->hasOne(State::class);
+    }
+
+    public function sluggable(): array
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
     }
 }

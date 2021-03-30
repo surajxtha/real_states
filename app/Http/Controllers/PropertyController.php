@@ -35,6 +35,7 @@ class PropertyController extends Controller
 
     public function create()
     {
+        $title = "Property";
         $purposes = Purpose::all();
         $types = Type::all();
         $categories = Category::all();
@@ -49,7 +50,7 @@ class PropertyController extends Controller
         $ownershipTypes = OwnershipType::all();
         $prices = PriceOn::all();
 
-        return view('cms.properties.create', compact('purposes', 'types', 'categories', 'states', 'districts', 'measurements', 'facings', 'roadTypes', 'months', 'furnishings', 'amenities', 'ownershipTypes', 'prices'));
+        return view('cms.properties.create', compact('title','purposes', 'types', 'categories', 'states', 'districts', 'measurements', 'facings', 'roadTypes', 'months', 'furnishings', 'amenities', 'ownershipTypes', 'prices'));
     }
 
     public function store(Request $request)
