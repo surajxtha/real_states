@@ -29,6 +29,7 @@ class PropertyController extends Controller
     {
         $title = 'Property';
         $properties = Property::all();
+
         return view('cms.properties.index', compact('properties', 'title'));
     }
 
@@ -165,10 +166,12 @@ class PropertyController extends Controller
         $property->price = $request->input('price');
         $property->price_on_id = $request->input('price_on_id');
         $property->update();
+
         return redirect()->route('properties.index')->with('success', 'Updated Successfully');
     }
 
-    public function storeImages(Request $request){
+    public function storeImages(Request $request)
+    {
 
         foreach ($request['images'] as $propertyImage) {
             $filename = $this->uploadOne($propertyImage, 'properties/' . $request['property_id'] . '/');
@@ -177,6 +180,7 @@ class PropertyController extends Controller
                 'property_id' => $request['property_id']
             ]);
         }
+
         return redirect()->back();
     }
 
@@ -192,7 +196,8 @@ class PropertyController extends Controller
         }
 
         $property->delete();
-        return redirect()->route('properties.index')->with('success','Deleted Successfully');
+
+        return redirect()->route('properties.index')->with('success', 'Deleted Successfully');
     }
 
     public function deleteImage($id)
@@ -207,7 +212,6 @@ class PropertyController extends Controller
 
         return back()->with('success', 'Image Deleted successfully.');
     }
-
 
 
 }
