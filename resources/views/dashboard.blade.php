@@ -124,8 +124,8 @@
                     <li>
                         <a href="javascript: void(0);"> <i data-feather="activity"></i> <span > Property </span> <span class="menu-arrow"></span> </a>
                         <ul class="nav-second-level" aria-expanded="false">
-                            <li><a href="/create">Post Property</a></li>
-                            <li><a href="pages-profile.html">View Post</a></li>
+                            <li><a href="{{route('properties.create')}}">Add Property</a></li>
+                            <li><a href="{{route('properties.index')}}">View Property</a></li>
 
                         </ul>
                     </li>

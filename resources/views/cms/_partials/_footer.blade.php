@@ -36,12 +36,24 @@
 <script src="{{asset('cms_assets/js/pages/datatables.init.js')}}"></script>
 
 <script src="{{ asset('cms_assets/libs/apexcharts/apexcharts.min.js') }}"></script>
+<script src="{{asset('cms_assets/libs/bootstrap-tagsinput/bootstrap-tagsinput.min.js')}}"></script>
+<script src="{{ asset('cms_assets/libs/select2/select2.min.js')}}"></script>
+
+<script src="{{ asset('cms_assets/libs/dropify/js/dropify.min.js')}}"></script>
+
 
 <script src="{{ asset('cms_assets/libs/multiselect/jquery.multi-select.js') }}"></script>
 
 <script src="{{ asset('cms_assets/libs/flatpickr/flatpickr.min.js') }}"></script>
 <script src="{{ asset('cms_assets/js/pages/dashboard.init.js') }}"></script>
+<script src="{{ asset('cms_assets/js/pages/form-advanced.init.js') }}"></script>
 <script src="{{ asset('cms_assets/js/app.min.js') }}"></script>
+
+
+<script>
+    $('.dropify').dropify();
+</script>
+
 </body>
 </html>
 

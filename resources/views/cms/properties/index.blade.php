@@ -20,13 +20,11 @@
             <div class="card">
                 <div class="card-body">
                     <h4 class="header-title mt-0 mb-2">List of all properties added by users.</h4>
-
-                    <table id="basic-datatable" class="table dt-responsive nowrap">
+                    <table id="basic-datatable" class="table dt-responsive nowrap ">
                         <thead>
                         <tr>
                             <th>SN</th>
                             <th>Name</th>
-                            <th>User</th>
                             <th>Location</th>
                             <th>Price</th>
                             <th>Status</th>
@@ -41,7 +39,7 @@
                             <tr>
                                 <td>{{$loop->index + 1}}</td>
                                 <td>{{$property->title}}</td>
-                                <td>Anuj Pandey</td>
+
                                 <td>{{$property->city . ', ' . $property->location_area}}</td>
                                 <td>{{$property->price}}</td>
 
@@ -50,12 +48,14 @@
                                 <td>
                                     <span class="badge badge-{{$property->status == 1 ? 'success' : 'danger'}}" id="badge-status-{{$property->id}} ">{{$property->status == 1 ? 'Approved' : 'Not Approved'}}</span>
                                 </td>
-                                <td>Edit Delete</td>
+                                <td><a href="{{route('properties.edit',$property->id)}}" class="btn btn-primary">Edit</a>
+                                    <a href="{{route('properties.delete',$property->id)}}" class="btn btn-danger">Delete</a></td>
                             </tr>
                         @endforeach
 
                         </tbody>
                     </table>
+
 
                 </div> <!-- end card body-->
             </div> <!-- end card -->

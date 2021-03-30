@@ -2,9 +2,7 @@
 
 namespace App\Models;
 
-use App\PropertyImage;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Property extends Model
 {
@@ -17,14 +15,13 @@ class Property extends Model
         'status',
         'state_id',
         'district_id',
-        'city_id',
+        'city',
         'iframe',
         'total_area',
         'measurement_area_id',
         'built_up_area',
         'road_access_id',
         'built_year',
-        'calender_type',
         'month_id',
         'furnishing_id',
         'kitchen_count',
@@ -32,6 +29,7 @@ class Property extends Model
         'bed_room_count',
         'bath_room_count',
         'hall_count',
+        'road_type_id',
         'total_floor_count',
         'parking',
         'amenity_id',
@@ -44,5 +42,25 @@ class Property extends Model
     public function propertyImages()
     {
         return $this->hasMany(PropertyImage::class);
+    }
+
+    public function purpose()
+    {
+        return $this->hasOne(Purpose::class);
+    }
+
+    public function type()
+    {
+        return $this->hasOne(Type::class);
+    }
+
+    public function category()
+    {
+        return $this->hasOne(Category::class);
+    }
+
+    public function state()
+    {
+        return $this->hasOne(State::class);
     }
 }

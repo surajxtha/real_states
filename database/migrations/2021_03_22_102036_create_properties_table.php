@@ -25,6 +25,7 @@ class CreatePropertiesTable extends Migration
             $table->foreignId('district_id')->constrained()->onDelete('cascade');
             $table->string('city');
             $table->string('location_area')->nullable();
+            $table->string('landmark')->nullable();
             $table->string('iframe');
             $table->string('total_area');
             $table->foreignId('measurement_area_id')->constrained()->onDelete('cascade');
@@ -33,7 +34,6 @@ class CreatePropertiesTable extends Migration
             $table->foreignId('property_facing_id')->constrained()->onDelete('cascade');
             $table->foreignId('road_type_id')->constrained()->onDelete('cascade');
             $table->string('built_year');
-            $table->string('calender_type');
             $table->foreignId('month_id')->constrained()->onDelete('cascade');
             $table->foreignId('furnishing_id')->constrained()->onDelete('cascade');
             $table->string('kitchen_count')->nullable();
@@ -43,6 +43,7 @@ class CreatePropertiesTable extends Migration
             $table->string('hall_count')->nullable();
             $table->string('total_floor_count')->nullable();
             $table->string('parking');
+            $table->foreignId('amenity_id')->constrained()->onDelete('cascade');
             $table->foreignId('ownership_type_id')->constrained()->onDelete('cascade');
             $table->string('image')->nullable();
             $table->string('price');
