@@ -8,6 +8,6 @@ class Purpose extends Model
 {
     public function property()
     {
-        return $this->belongsTo(Property::class);
+        return $this->hasMany(Property::class);
     }
 }

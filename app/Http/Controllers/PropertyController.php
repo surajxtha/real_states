@@ -28,7 +28,7 @@ class PropertyController extends Controller
     public function index()
     {
         $title = 'Property';
-        $properties = Property::all();
+        $properties = Property::latest()->get();
 
         return view('cms.properties.index', compact('properties', 'title'));
     }
@@ -58,41 +58,14 @@ class PropertyController extends Controller
         $request->validate([
             'image' => 'max:2024'
         ]);
-        $property = new Property();
-        $property->title = $request->title;
-        $property->slug = Str::slug($request->title);
-        $property->description = $request->description;
-        $property->purpose_id = $request->purpose_id;
-        $property->category_id = $request->category_id;
-        $property->type_id = $request->type_id;
-        $property->state_id = $request->state_id;
-        $property->district_id = $request->district_id;
-        $property->city = $request->city;
-        $property->iframe = $request->iframe;
-        $property->total_area = $request->total_area;
-        $property->measurement_area_id = $request->measurement_area_id;
-        $property->built_up_area = $request->built_up_area;
-        $property->road_access_width = $request->road_access_width;
-        $property->property_facing_id = $request->property_facing_id;
-        $property->road_type_id = $request->road_type_id;
-        $property->built_year = $request->built_year;
-        $property->month_id = $request->month_id;
-        $property->furnishing_id = $request->furnishing_id;
-        $property->kitchen_count = $request->kitchen_count;
-        $property->dining_room_count = $request->dining_room_count;
-        $property->bed_room_count = $request->bed_room_count;
-        $property->bath_room_count = $request->bath_room_count;
-        $property->hall_count = $request->hall_count;
-        $property->total_floor_count = $request->total_floor_count;
-        $property->parking = $request->parking;
-        $property->amenity_id = $request->amenity_id;
-        $property->ownership_type_id = $request->ownership_type_id;
 
-        $property->image = $this->uploadOne($request->file('image'), 'properties/', 1200, 700);
+        $collection = collect($request->except('_token'));
 
-        $property->price = $request->price;
-        $property->price_on_id = $request->price_on_id;
-        $property->save();
+        $image = $this->uploadOne($request->file('image'), 'properties/', 1200, 700);
+
+        $merge = $collection->merge(compact('image'));
+
+        $property = Property::create($merge->all());
 
         foreach ($request['images'] as $propertyImage) {
             $filename = $this->uploadOne($propertyImage, 'properties/' . $property->id . '/');
@@ -103,13 +76,11 @@ class PropertyController extends Controller
         }
 
         return redirect()->route('properties.index')->with('success', 'Data stored Successfully');
-
-
     }
 
     public function edit(Property $property)
     {
-
+        $title = "Property";
         $purposes = Purpose::all();
         $types = Type::all();
         $categories = Category::all();
@@ -125,7 +96,7 @@ class PropertyController extends Controller
         $prices = PriceOn::all();
         $property->load('propertyImages');
 
-        return view('cms.properties.edit', compact('purposes', 'types', 'categories', 'states', 'districts', 'measurements', 'facings', 'roadTypes', 'months', 'furnishings', 'amenities', 'ownershipTypes', 'prices', 'property'));
+        return view('cms.properties.edit', compact('title','purposes', 'types', 'categories', 'states', 'districts', 'measurements', 'facings', 'roadTypes', 'months', 'furnishings', 'amenities', 'ownershipTypes', 'prices', 'property'));
 
     }
 

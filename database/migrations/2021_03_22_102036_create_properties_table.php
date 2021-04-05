@@ -49,6 +49,7 @@ class CreatePropertiesTable extends Migration
             $table->string('price');
             $table->foreignId('price_on_id')->constrained()->onDelete('cascade');
             $table->boolean('status')->constrained()->default(false);
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

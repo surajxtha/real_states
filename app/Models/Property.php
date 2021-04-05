@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
@@ -21,6 +22,8 @@ class Property extends Model
         'state_id',
         'district_id',
         'city',
+        'road_access_width',
+        'property_facing_id',
         'iframe',
         'total_area',
         'measurement_area_id',
@@ -42,6 +45,7 @@ class Property extends Model
         'image',
         'price',
         'price_on_id',
+        'category_id'
     ];
 
     public function propertyImages() : HasMany
@@ -49,9 +53,14 @@ class Property extends Model
         return $this->hasMany(PropertyImage::class);
     }
 
-    public function purpose() : HasOne
+    public function purpose() : BelongsTo
     {
-        return $this->hasOne(Purpose::class);
+        return $this->belongsTo(Purpose::class);
+    }
+
+    public function priceOn()
+    {
+        return $this->belongsTo(PriceOn::class);
     }
 
     public function type() : HasOne
@@ -64,11 +73,22 @@ class Property extends Model
         return $this->hasOne(Category::class);
     }
 
-    public function state() : HasOne
+    public function state()
     {
-        return $this->hasOne(State::class);
+        return $this->belongsTo(State::class);
     }
-
+    public function district()
+    {
+        return $this->belongsTo(District::class);
+    }
+    public function measurementArea()
+    {
+        return $this->belongsTo(MeasurementArea::class);
+    }
+    public function amenities()
+    {
+        return $this->hasMany(Amenity::class);
+    }
     public function sluggable(): array
     {
         return [

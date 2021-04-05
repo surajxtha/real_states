@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class State extends Model
 {
-    public function property()
+    public function properties()
     {
-        return $this->belongsTo(Property::class);
+        return $this->hasMany(Property::class);
     }
 }
