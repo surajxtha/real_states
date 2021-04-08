@@ -64,7 +64,7 @@
                             @endif
                         </form>
                         <div class="mt-4 text-center">
-                            Don't have an account? <a href="{{route('user-register')}}">Register</a>
+                            Don't have an account? <a href="{{route('register')}}">Register</a>
                         </div>
                         <div class="mt-4 text-center">
                             <a href="{{route('user-reset')}}">Forget your password?</a>

@@ -45,15 +45,16 @@ class Property extends Model
         'image',
         'price',
         'price_on_id',
-        'category_id'
+        'category_id',
+        'user_id'
     ];
 
-    public function propertyImages() : HasMany
+    public function propertyImages(): HasMany
     {
         return $this->hasMany(PropertyImage::class);
     }
 
-    public function purpose() : BelongsTo
+    public function purpose(): BelongsTo
     {
         return $this->belongsTo(Purpose::class);
     }
@@ -63,12 +64,12 @@ class Property extends Model
         return $this->belongsTo(PriceOn::class);
     }
 
-    public function type() : HasOne
+    public function type(): HasOne
     {
         return $this->hasOne(Type::class);
     }
 
-    public function category() : HasOne
+    public function category(): HasOne
     {
         return $this->hasOne(Category::class);
     }
@@ -77,18 +78,26 @@ class Property extends Model
     {
         return $this->belongsTo(State::class);
     }
+
     public function district()
     {
         return $this->belongsTo(District::class);
     }
+
     public function measurementArea()
     {
         return $this->belongsTo(MeasurementArea::class);
     }
+    public function roadType()
+    {
+        return $this->belongsTo(RoadType::class);
+    }
+
     public function amenities()
     {
-        return $this->hasMany(Amenity::class);
+        return $this->hasMany(PropertyAmenity::class);
     }
+
     public function sluggable(): array
     {
         return [

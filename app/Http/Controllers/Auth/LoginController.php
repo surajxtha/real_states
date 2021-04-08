@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-use Illuminate\Support\Facades\Auth;
+
 use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -27,7 +27,7 @@ class LoginController extends Controller
      * @var string
      */
     //protected $redirectTo = RouteServiceProvider::HOME;
-    protected $redirectTo = 'properties/create';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -38,8 +38,10 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-    public function logout() {
+
+    public function logout()
+    {
         Auth::logout();
-        return redirect('/');
+        return redirect(route('home'))->with('success', 'Logout Successfully.');
     }
 }

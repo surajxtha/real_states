@@ -38,7 +38,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/home">
+                        <a class="nav-link" href="{{route('home')}}">
                             Home
                         </a>
                     </li>
@@ -49,53 +49,58 @@
                         </a>
                     </li>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                            Agency
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('site.properties.index')}}">
+                            About Us
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
-                            <a class="dropdown-item" href="agency-list.html">Agency List</a>
-                            <a class="dropdown-item" href="agency-profile.html">Agency Profile</a>
-                            <a class="dropdown-item" href="agents.html">Agents</a>
-                            <a class="dropdown-item" href="agent-profile.html">Agent Profile</a>
-                        </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                            My Account
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('site.properties.index')}}">
+                            Contact Us
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
-                            <a class="dropdown-item" href="user-profile.html">User Profile</a>
-                            <a class="dropdown-item" href="my-properties.html">My Properties</a>
-                            <a class="dropdown-item" href="favorite-properties.html">Favorite Properties</a>
-                            <a class="dropdown-item" href="{{route('user-register')}}">Add Property</a>
-                        </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false">
-                            Pages
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
-                            <a class="dropdown-item" href="about.html">About Us</a>
-                            <a class="dropdown-item" href="faq.html">FAQ</a>
-                            <a class="dropdown-item" href="contact.html">Contact</a>
-                            <a class="dropdown-item" href="not-found.html">404 Page</a>
-                        </div>
-                    </li>
+
+                    @if(auth()->check())
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false">
+                                {{auth()->user()->name}}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
+                                <a class="dropdown-item" href="user-profile.html">User Profile</a>
+                                <a class="dropdown-item" href="my-properties.html">My Properties</a>
+                                <a class="dropdown-item" href="favorite-properties.html">Favorite Properties</a>
+                                <a class="dropdown-item" href="{{route('site.properties.create')}}">Add Property</a>
+                                <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
+                            </div>
+                        </li>
+                    @endif
+
                 </ul>
-                <div class="my-2 my-lg-0">
-                    <ul class="list-inline main-nav-right">
-                        <li class="list-inline-item">
-                            <a class="btn btn-link btn-sm" href="{{route('user-login')}}">Sign In</a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a class="btn btn-success btn-sm" href="{{route('user-register')}}">Sign Up</a>
-                        </li>
-                    </ul>
-                </div>
+
+                @if(!auth()->check())
+                    <div class="my-2 my-lg-0">
+                        <ul class="list-inline main-nav-right">
+                            <li class="list-inline-item">
+                                <a class="btn btn-link btn-sm" href="{{route('login')}}">Sign In</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="btn btn-success btn-sm" href="{{route('register')}}">Sign Up</a>
+                            </li>
+                        </ul>
+                    </div>
+                @else
+                    <div class="my-2 my-lg-0 ml-3">
+                        <ul class="list-inline main-nav-right">
+                            <li class="list-inline-item">
+                                <a class="btn btn-success btn-sm" href="{{route('site.properties.create')}}">Add Property</a>
+                            </li>
+                        </ul>
+                    </div>
+                @endif
             </div>
         </div>
     </nav>

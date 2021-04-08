@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class PropertySeeder extends Seeder
 {
@@ -37,11 +38,11 @@ class PropertySeeder extends Seeder
                 'hall_count' => 5,
                 'total_floor_count' => 10,
                 'parking' => '2 Car 2 Bikes',
-                'amenity_id' => 1,
                 'ownership_type_id' => 1,
-                'image' => 'property/property-image.jpg',
+                'image' => 'properties/1.png',
                 'price' => '1500000',
                 'price_on_id' => 1,
+                'user_id' => 2
             ],
             [
                 'title' => 'Bungalow for sale at Godawari 2',
@@ -72,11 +73,11 @@ class PropertySeeder extends Seeder
                 'hall_count' => 5,
                 'total_floor_count' => 10,
                 'parking' => '2 Car 2 Bikes',
-                'amenity_id' => 3,
                 'ownership_type_id' => 1,
-                'image' => 'property/property-image.jpg',
+                'image' => 'properties/2.png',
                 'price' => '1500000',
                 'price_on_id' => 1,
+                'user_id' => 2
             ]
         ]);
     }

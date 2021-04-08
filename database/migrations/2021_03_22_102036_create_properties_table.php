@@ -43,7 +43,6 @@ class CreatePropertiesTable extends Migration
             $table->string('hall_count')->nullable();
             $table->string('total_floor_count')->nullable();
             $table->string('parking');
-            $table->foreignId('amenity_id')->constrained()->onDelete('cascade');
             $table->foreignId('ownership_type_id')->constrained()->onDelete('cascade');
             $table->string('image')->nullable();
             $table->string('price');

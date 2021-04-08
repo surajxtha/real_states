@@ -125,19 +125,11 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4">
                                 <ul class="sidebar-card-list">
+
                                     @foreach($property->amenities as $amenity)
-                                    <li><i class="mdi mdi-checkbox-marked-outline "></i> {{$amenity->$amenity}}</li>
+                                        <li><i class="mdi mdi-checkbox-marked-outline "></i> {{$amenity->amenity}}</li>
                                     @endforeach
-                                </ul>
-                            </div>
-                            <div class="col-lg-4 col-md-4">
-                                <ul class="sidebar-card-list">
-                                    <li><a href="property-single-gallery.html#"><i class="mdi mdi-checkbox-marked-outline text-success"></i> Personal safe</a></li>
-                                    <li><a href="property-single-gallery.html#"><i class="mdi mdi-checkbox-marked-outline text-success"></i> Minibar</a></li>
-                                    <li><a href="property-single-gallery.html#"><i class="mdi mdi-checkbox-marked-outline text-success"></i> Refrigerator</a></li>
-                                    <li><a href="property-single-gallery.html#"><i class="mdi mdi-checkbox-marked-outline text-success"></i> In-room tea and coffee</a></li>
-                                    <li><a href="property-single-gallery.html#"><i class="mdi mdi-checkbox-marked-outline text-success"></i> Writing desk</a></li>
-                                    <li><a href="property-single-gallery.html#"><i class="mdi mdi-checkbox-marked-outline text-success"></i> Electronic key card access</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -658,17 +650,4 @@
     </div>
 </section>
 <!-- End Copyright -->
-<!-- Bootstrap core JavaScript -->
-<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script src="{{asset('lander_assets/vendor/jquery/jquery.min.js')}}"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- Contact form JavaScript -->
-<!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-<script src="{{asset('lander_assets/js/jqBootstrapValidation.js')}}"></script>
-<script src="{{asset('lander_assets/js/contact_me.js')}}"></script>
-<!-- select2 Js -->
-<script src="{{asset('lander_assets/vendor/select2/js/select2.min.js')}}"></script>
-<!-- Custom -->
-<script src="{{asset('lander_assets/js/custom.js')}}"></script>
-</body>
-</html>
+@include('lander._partials._footer')

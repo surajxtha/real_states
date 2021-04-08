@@ -307,9 +307,9 @@
                                                 <div class="col-4">
                                                     <div class="form-group">
                                                         <label for="amenity_id">Amenities</label>
-                                                        <select class="form-control wide" id="amenity_id" data-plugin="customselect" multiple name="amenity_id">
+                                                        <select class="form-control wide" id="amenity_id" data-plugin="customselect" multiple name="amenities[]">
                                                             @foreach($amenities as $amenity)
-                                                                <option value="{{$amenity->id}}">{{$amenity->amenity}}</option>
+                                                                <option value="{{$amenity->amenity}}">{{$amenity->amenity}}</option>
                                                             @endforeach
                                                         </select>
                                                     </div>

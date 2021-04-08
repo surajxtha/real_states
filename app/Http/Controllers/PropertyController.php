@@ -11,6 +11,7 @@ use App\Models\Month;
 use App\Models\OwnershipType;
 use App\Models\PriceOn;
 use App\Models\Property;
+use App\Models\PropertyAmenity;
 use App\Models\PropertyFacing;
 use App\Models\PropertyImage;
 use App\Models\Purpose;
@@ -66,6 +67,13 @@ class PropertyController extends Controller
         $merge = $collection->merge(compact('image'));
 
         $property = Property::create($merge->all());
+
+        foreach ($request['amenities'] as $amenity) {
+            PropertyAmenity::create([
+                'amenity' => $amenity,
+                'property_id' => $property->id
+            ]);
+        }
 
         foreach ($request['images'] as $propertyImage) {
             $filename = $this->uploadOne($propertyImage, 'properties/' . $property->id . '/');

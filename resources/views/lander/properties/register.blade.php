@@ -73,7 +73,7 @@
                             </button>
                         </form>
                         <div class="mt-4 text-center">
-                            Have an account - <a href="{{route('user-login')}}">Login</a>
+                            Have an account - <a href="{{route('login')}}">Login</a>
                         </div>
 
                     </div>

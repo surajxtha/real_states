@@ -194,7 +194,7 @@ label {
     background-color: #f8f8f8;
     border-color: #eeeeee;
     font-size: 13px;
-}	
+}
 .select2-container--open .select2-dropdown--below {
     border: medium none;
     border-radius: 0;
@@ -685,7 +685,7 @@ nav.navbar .navbar-nav .nav-link {
     width: 3px;
 }
 .user-pages-main {
-    margin: -66px 0 0 0;
+    margin: 0 0 0 0;
 }
 
 /* Property Single Gallery */
@@ -865,7 +865,7 @@ nav.navbar .dropdown-menu .dropdown-item {
 .section-padding {
     padding: 60px 0;
 }
-	
+
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
      .container {

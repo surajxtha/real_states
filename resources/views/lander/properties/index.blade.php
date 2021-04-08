@@ -1,4 +1,7 @@
 @include('lander._partials._header')
+<?php
+/** @var App\Models\Property $property ; */
+?>
 <!-- Main Slider With Form -->
 <section class="site-slider">
     <div id="siteslider" class="carousel slide" data-ride="carousel">
@@ -274,43 +277,21 @@
                                 <a href="{{route('site.properties.show',$property->slug)}}">
                                     <div class="row no-gutters">
                                         <div class="col-lg-5 col-md-5">
-                                            @foreach($purposes as $purpose)
-                                                @if($purpose->id == $property->purpose_id)
-                                                    <span class="{{$purpose->id==1 ? 'badge badge-danger' : 'badge badge-success' }}">{{$purpose->purpose}}</span>
-                                                @endif
-                                            @endforeach
+                                                    <span class="{{$property->purpose->id==1 ? 'badge badge-danger' : 'badge badge-success' }}">{{$property->purpose->purpose}}</span>
                                             <img class="card-img-top" src="{{asset('uploads/'.$property->image)}}" alt="">
                                         </div>
                                         <div class="col-lg-7 col-md-7">
                                             <div class="card-body">
                                                 <h5 class="card-title">{{$property->title}}</h5>
-                                                <h6 class="card-subtitle mb-2 text-muted"><i class="mdi mdi-home-map-marker"></i> 250-260 3rd St, Hoboken, NJ 07030, USA</h6>
+                                                <h6 class="card-subtitle mb-2 text-muted"><i class="mdi mdi-home-map-marker"></i>{{$property->state->name.','.$property->district->name }}</h6>
                                                 <h2 class="text-success mb-0 mt-3">
                                                     Rs.{{$property->price}}
-                                                    @foreach($prices as $price)
-                                                        @if($price->id==$property->price_on_id)
-                                                            <small>{{$price->price}}</small>
-                                                        @endif
-                                                    @endforeach
+                                                    <small>{{$property->priceOn->price}}</small>
                                                 </h2>
                                             </div>
                                             <div class="card-footer">
-                                            <span><i class="mdi mdi-move-resize-variant"></i>Total Area :
-                                                  @foreach($measurements as $measurement)
-                                                    @if($measurement->id==$property->measurement_area_id)
-                                                        <strong>
-                                                    {{$property->total_area}}{{$measurement->unit}}
-
-                                                </strong>
-                                                    @endif
-                                                @endforeach</span>
-                                                <span><i class="mdi mdi-road"></i> Road :
-                                                @foreach($roadTypes as $roadType)
-                                                        @if($roadType->id==$property->road_type_id)
-                                                            <strong>{{$property->road_access_width}} ft. ({{$roadType->type}})</strong>
-                                                        @endif
-                                                    @endforeach
-                                            </span>
+                                            <span><i class="mdi mdi-move-resize-variant"></i>Total Area :<strong>{{$property->total_area}}{{$property->measurementArea->unit}}</strong></span>
+                                                <span><i class="mdi mdi-road"></i> Road :<strong>{{$property->road_access_width}} ft. ({{$property->roadType->type}})</strong></span>
                                             </div>
                                         </div>
                                     </div>
@@ -324,17 +305,9 @@
                 </div>
                 <nav class="mt-5">
                     <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1"><i class="mdi mdi-chevron-left"></i></a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">...</a></li>
-                        <li class="page-item"><a class="page-link" href="#">10</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#"><i class="mdi mdi-chevron-right"></i></a>
-                        </li>
+                      {{ $properties->links() }}
+
+
                     </ul>
                 </nav>
             </div>
