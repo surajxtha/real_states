@@ -51,7 +51,7 @@ class PropertyController extends Controller
         $ownershipTypes = OwnershipType::all();
         $prices = PriceOn::all();
 
-        return view('cms.properties.create', compact('title','purposes', 'types', 'categories', 'states', 'districts', 'measurements', 'facings', 'roadTypes', 'months', 'furnishings', 'amenities', 'ownershipTypes', 'prices'));
+        return view('cms.properties.create', compact('title', 'purposes', 'types', 'categories', 'states', 'districts', 'measurements', 'facings', 'roadTypes', 'months', 'furnishings', 'amenities', 'ownershipTypes', 'prices'));
     }
 
     public function store(Request $request)
@@ -104,7 +104,7 @@ class PropertyController extends Controller
         $prices = PriceOn::all();
         $property->load('propertyImages');
 
-        return view('cms.properties.edit', compact('title','purposes', 'types', 'categories', 'states', 'districts', 'measurements', 'facings', 'roadTypes', 'months', 'furnishings', 'amenities', 'ownershipTypes', 'prices', 'property'));
+        return view('cms.properties.edit', compact('title', 'purposes', 'types', 'categories', 'states', 'districts', 'measurements', 'facings', 'roadTypes', 'months', 'furnishings', 'amenities', 'ownershipTypes', 'prices', 'property'));
 
     }
 
@@ -191,6 +191,20 @@ class PropertyController extends Controller
         $image->delete();
 
         return back()->with('success', 'Image Deleted successfully.');
+    }
+
+
+    public function types($id)
+    {
+        $type = Type::find($id);
+
+        $purposes = Purpose::select(['id', 'purpose'])->get();
+        $districts = District::select(['id','name'])->get();
+        $types = Type::all();
+
+
+
+        return view('lander.properties.types', compact('type', 'purposes', 'districts', 'types'));
     }
 
 

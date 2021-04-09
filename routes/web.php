@@ -13,8 +13,11 @@ Route::get('/properties/user/{property}/edit', 'Site\PropertyController@edit')->
 Route::put('/properties/user/{property}/update', 'Site\PropertyController@update')->name('site.properties.update');
 Route::get('/properties/user/list', 'Site\PropertyController@display')->name('site.properties.list');
 Route::get('/properties/{property}/delete','Site\PropertyController@delete')->name('site.properties.delete');
+Route::get('/properties/search','SearchController@index')->name('site.properties.search');
 
-Route::get('/search', 'SearchController@index')->name('search');
+Route::post('/search', 'SearchController@index')->name('search');
+
+Route::get('/type/{id}', 'PropertyController@types')->name('site.property.type.index');
 
 require __DIR__ . '/admin.php';
 Auth::routes();

@@ -2,43 +2,33 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\MeasurementArea;
-use App\Models\PriceOn;
+use App\Models\District;
 use App\Models\Property;
 use App\Models\Purpose;
-use App\Models\RoadType;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        //$properties=Property::all();
-        $purposes=Purpose::all();
-        $prices = PriceOn::all();
-        $measurements = MeasurementArea::all();
-        $roadTypes = RoadType::all();
-        //$properties=Property::with('purpose', 'type', 'district')
-            $query = Property::query();
+        $properties = Property::with('purpose', 'state', 'district', 'priceOn', 'roadType', 'measurementArea')->where('purpose_id', $request['purpose_id']);
 
-/*if(request()->has('id')) {
-    $query->where('purpose', 'like', request('id'));
-}
-if(request()->has('district_id')) {
-            $query->where('name', 'like', request('id'));
+        if ($request['district_id']) {
+            $properties = $properties->where('district_id', $request['district_id']);
         }
-if(request()->has('type_id')) {
-    $query->where('type', 'like', request('id'));
-}*/
-        //$query->with('purpose', 'district', 'type')->get();
-        $properties = Property::where(function ($query) {
-            $query->select('type')
-                ->from('types')
-                ->whereColumn('id', 'property.type_id')
-                ->get();
-        });
-        return view('lander.properties.location',compact('$query','purposes','prices','measurements','roadTypes'));
 
+        if ($request['type_id']) {
+            $properties = $properties->where('type_id', $request['type_id']);
+        }
+
+        $properties = $properties->orderBy('id', 'desc')->get();
+
+        // For Search Feature
+        $purposes = Purpose::select(['id', 'purpose'])->get();
+        $districts = District::select(['id','name'])->get();
+        $types = Type::all();
+
+        return view('lander.properties.search', compact('properties', 'purposes', 'districts', 'types'));
     }
-
 }

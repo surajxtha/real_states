@@ -33,16 +33,16 @@
                 <h1 class="display-4 mt-0 font-weight-bold text-shadow">Let us guide you home
                 </h1>
             </div>
-            <form action="{{route('search')}}" method="GET">
+            <form action="{{route('search')}}" method="post">
+                @csrf
                 <div class="row no-gutters">
                     <div class="col-md-4">
                         <div class="input-group">
                             <div class="input-group-addon"><i class="mdi mdi-map-marker-multiple"></i></div>
-                            <select class="form-control select2 no-radius" id="district">
-
-                                <option value="">Purpose</option>
+                            <select class="form-control select2 no-radius" id="district" name="purpose_id" required>
+                                <option disabled selected>Select Purpose</option>
                                 @foreach($purposes as $purpose)
-                                    <option value="$purpose->id">{{$purpose->purpose}}</option>
+                                    <option value="{{$purpose->id}}">{{$purpose->purpose}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -50,11 +50,11 @@
                     <div class="col-md-3">
                         <div class="input-group">
                             <div class="input-group-addon"><i class="mdi mdi-google-maps"></i></div>
-                            <select class="form-control select2 no-radius" id="district">
+                            <select class="form-control select2 no-radius" id="district" name="district_id">
 
                                 <option value="">Locations</option>
                                 @foreach($districts as $district)
-                                    <option value="$district->id">{{$district->name}}</option>
+                                    <option value="{{$district->id}}">{{$district->name}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -62,10 +62,10 @@
                     <div class="col-md-3">
                         <div class="input-group">
                             <div class="input-group-addon"><i class="mdi mdi-security-home"></i></div>
-                            <select class="form-control select2 no-radius">
+                            <select class="form-control select2 no-radius" name="type_id">
                                 <option value="">Property Type</option>
                                 @foreach($types as $type)
-                                    <option value="$type->id">{{$type->type}}</option>
+                                    <option value="{{$type->id}}">{{$type->type}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -91,7 +91,7 @@
             @foreach($properties as $property)
                 <div class="col-lg-4 col-md-4">
                     <div class="card card-list">
-                        <a href="index.html#">
+                        <a href="{{route('site.properties.show', $property->slug)}}">
                             @foreach($purposes as $purpose)
                                 @if($purpose->id == $property->purpose_id)
                                     <span class="{{$purpose->id==1 ? 'badge badge-danger' : 'badge badge-success' }}">{{$purpose->purpose}}</span>
@@ -147,6 +147,5 @@
     </div>
 </section>
 <!-- End Properties List -->
-
 
 @include('lander._partials._footer')

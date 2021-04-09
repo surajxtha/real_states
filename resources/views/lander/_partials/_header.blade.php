@@ -12,12 +12,12 @@
     <!-- Bootstrap core CSS -->
     <link href="{{asset('lander_assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <!-- Material Design Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.9.55/css/materialdesignicons.min.css" integrity="sha512-vIgFb4o1CL8iMGoIF7cYiEVFrel13k/BkTGvs0hGfVnlbV6XjAA0M0oEHdWqGdAVRTDID3vIZPOHmKdrMAUChA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.9.55/css/materialdesignicons.min.css" integrity="sha512-vIgFb4o1CL8iMGoIF7cYiEVFrel13k/BkTGvs0hGfVnlbV6XjAA0M0oEHdWqGdAVRTDID3vIZPOHmKdrMAUChA==" crossorigin="anonymous"/>
 
     <link href="{{asset('lander_assets/libs/dropify/css/dropify.min.css')}}" type="text/css" rel="stylesheet">
     <!-- Select2 CSS -->
-    <link href="{{asset('lander_assets/vendor/select2/css/select2-bootstrap.css')}}" />
-    <link href="{{asset('lander_assets/vendor/select2/css/select2.min.css')}}" rel="stylesheet" />
+    <link href="{{asset('lander_assets/vendor/select2/css/select2-bootstrap.css')}}"/>
+    <link href="{{asset('lander_assets/vendor/select2/css/select2.min.css')}}" rel="stylesheet"/>
     <link href="{{ asset('lander_assets/libs/multiselect/multi-select.css') }}" rel="stylesheet" type="text/css"/>
     <!-- Custom styles for this template -->
     <link href="{{asset('lander_assets/css/style.css')}}" rel="stylesheet">
@@ -27,7 +27,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand text-success logo" href="{{asset('index.html')}}">
+            <a class="navbar-brand text-success logo" href="{{route('home')}}">
                 <img class="img-fluid" src="{{asset('lander_assets/img/logo.svg')}}" alt="">
             </a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -48,7 +48,6 @@
                             Property
                         </a>
                     </li>
-
 
 
                     <li class="nav-item">

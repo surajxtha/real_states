@@ -2,13 +2,12 @@
 
 namespace App\Models;
 
-use App\Models\Property;
 use Illuminate\Database\Eloquent\Model;
 
 class Type extends Model
 {
-    public function property()
+    public function properties()
     {
-        return $this->belongsTo(Property::class);
+        return $this->belongsTo(Property::class, '');
     }
 }
